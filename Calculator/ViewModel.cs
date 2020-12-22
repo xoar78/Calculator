@@ -22,12 +22,12 @@ namespace Calculator
 
         public ViewModel()
         {
-            History = new HistoryDB();
+            //History = new HistoryDB();
             //History = new HistoryInFile();
-            //History = new HistoryInRAM();
-            Mem = new MemoryDB();
+            History = new HistoryInRAM();
+            //Mem = new MemoryDB();
             //Mem = new MemoryInFile();
-            //Mem = new MemoryInRAM();
+            Mem = new MemoryInRAM();
         }
 
         private string textValue = "";

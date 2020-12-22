@@ -20,11 +20,11 @@
         <KeyBinding Command="{Binding AddNumber}" CommandParameter="7" Key="D7"/>
         <KeyBinding Command="{Binding AddNumber}" CommandParameter="8" Key="D8"/>
         <KeyBinding Command="{Binding AddNumber}" CommandParameter="9" Key="D9"/>
-        <KeyBinding Command="{Binding Calculate}" CommandParameter="-" Key="Subtract"/>
-        <KeyBinding Command="{Binding Calculate}" CommandParameter="+" Key="Add"/>
-        <KeyBinding Command="{Binding Calculate}" CommandParameter="*" Key="Multiply"/>
-        <KeyBinding Command="{Binding Calculate}" CommandParameter="/" Key="Divide"/>
-        <KeyBinding Command="{Binding Calculate}" CommandParameter="," Key="Separator"/>
+        <KeyBinding Command="{Binding AddNumber}" CommandParameter="-" Key="Subtract"/>
+        <KeyBinding Command="{Binding AddNumber}" CommandParameter="+" Key="Add"/>
+        <KeyBinding Command="{Binding AddNumber}" CommandParameter="*" Key="Multiply"/>
+        <KeyBinding Command="{Binding AddNumber}" CommandParameter="/" Key="Divide"/>
+        <KeyBinding Command="{Binding AddNumber}" CommandParameter="," Key="Separator"/>
         <KeyBinding Command="{Binding Brackets}" CommandParameter="(" Key="D9" Modifiers="Shift"/>
         <KeyBinding Command="{Binding Brackets}" CommandParameter=")" Key="D0" Modifiers="Shift"/>
         <KeyBinding Command="{Binding Back}" CommandParameter="Back" Key="Back"/>
