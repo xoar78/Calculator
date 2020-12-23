@@ -38,7 +38,6 @@
             <Setter Property="Foreground" Value="White" />
             <Setter Property="Background" Value="Black" />
             <Setter Property="FontSize" Value="23" />
-            <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Hidden"/>
         </Style>
     </Application.Resources>
 </Application>

@@ -92,14 +92,6 @@ namespace Calculator
             }, x => true);
         }
 
-        public ICommand DelMemory
-        {
-            get => new RelayCommand<TextBox>((x) =>
-            {
-                Mem.Remove(x.Text);
-            }, x => true);
-        }
-
         public ICommand AddNumber
         {
             get => new RelayCommand<string>(x =>
@@ -129,6 +121,7 @@ namespace Calculator
                 if (result == "Error")
                     result = "";
                 TextValue = result;
+                isComma = false;
             }, x => ParserCalculator.Valid(TextValue));
         }
 
@@ -145,6 +138,8 @@ namespace Calculator
             get => new RelayCommand(() =>
             {
                 if (TextValue == "") return;
+                if (TextValue[TextValue.Length - 1] == ',')
+                    isComma = false;
                 TextValue = TextValue.Remove(TextValue.Length - 1);
             }, () => true);
         }
@@ -154,6 +149,7 @@ namespace Calculator
             get => new RelayCommand(() =>
             {
                 TextValue = "";
+                isComma = false;
             }, () => true);
         }
 

@@ -27,7 +27,7 @@ namespace Calculator.Tests
         public void TestBr2()
         {
             string result = ParserCalculator.Calculate("((4))+(2*3)-(1+2)*3-(10/((7-2)-1))");
-            Assert.AreEqual("-1,5000", result);
+            Assert.AreEqual("-1,500", result);
         }
         [TestMethod]
         public void TestEr1()
@@ -57,19 +57,19 @@ namespace Calculator.Tests
         public void Test9()
         {
             string result = ParserCalculator.Calculate("8,6+4,5");
-            Assert.AreEqual("13,1000", result);
+            Assert.AreEqual("13,1", result);
         }
         [TestMethod]
         public void Test10()
         {
             string result = ParserCalculator.Calculate("8,6+45");
-            Assert.AreEqual("53,6000", result);
+            Assert.AreEqual("53,6", result);
         }
         [TestMethod]
         public void Test11()
         {
             string result = ParserCalculator.Calculate("86+4,5");
-            Assert.AreEqual("90,5000", result);
+            Assert.AreEqual("90,5", result);
         }
 
     }

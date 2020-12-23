@@ -60,13 +60,18 @@ namespace Calculator
 
         private static string SolveExp(int[] arrOp, string[] arrValue, string exp)
         {
+            bool div = false;
+            bool raz = false;
             for (int i = 0; i < arrOp.Length; i++)
             {
                 string value = "";
                 if (exp[arrOp[i]] == '*')
                     value = Convert.ToString(Double.Parse(arrValue[i]) * Double.Parse(arrValue[i + 1]));
                 else if (exp[arrOp[i]] == '/')
+                {
                     value = Convert.ToString(Double.Parse(arrValue[i]) / Double.Parse(arrValue[i + 1]));
+                    div = true;
+                }
                 if (value != "")
                 {
                     arrValue[i] = value;
@@ -87,10 +92,13 @@ namespace Calculator
                 if (exp[arrOp[i]] == '+')
                     result = Convert.ToString(Double.Parse(result) + Double.Parse(arrValue[i + 1]));
                 if (exp[arrOp[i]] == '-')
+                {
                     result = Convert.ToString(Double.Parse(result) - Double.Parse(arrValue[i + 1]));
+                    raz = true;
+                }    
             }
-            if (result.IndexOf(',') != -1)
-                result = string.Format("{0:N4}", Convert.ToDouble(result));
+            if ((div == true || raz == true) && result.IndexOf(',') != -1)
+                result = string.Format("{0:N3}", Convert.ToDouble(result));
             return result;
         }
 

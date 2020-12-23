@@ -105,17 +105,13 @@
                                     <ColumnDefinition/>
                                     <ColumnDefinition/>
                                 </Grid.ColumnDefinitions>
-                                <TextBox IsReadOnly="True" Grid.Column="0" Grid.Row="0" Width="160"
-                                         Text="{Binding ., Mode=OneWay}" 
-                                         Name="MemoryText" 
+                                <TextBox IsReadOnly="True" Grid.Column="0" Grid.Row="0" Width="210"
+                                         Text="{Binding ., Mode=OneWay}"
+                                         Name="MemoryText"
                                          Style="{StaticResource TextBoxStyle}"/>
-                                <Button Content="Take" Grid.Column="1" Grid.Row="0" FontSize="18" Margin="5,0,5,0" Width="50" Background="Black" Foreground="White"
+                                <Button Content="Take" Grid.Column="1" Grid.Row="0" FontSize="20" Margin="5,0,5,0" Width="50" Background="Black" Foreground="White"
                                         DataContext="{Binding ElementName=MainWin, Path=DataContext}"
                                         Command="{Binding TakeMemory}"
-                                        CommandParameter="{Binding Path=., ElementName=MemoryText}"/>
-                                <Button Content="Delete" Grid.Column="2" Grid.Row="0" FontSize="15" Margin="0,0,5,0" Width="50" Background="Black" Foreground="White"
-                                        DataContext="{Binding ElementName=MainWin, Path=DataContext}"
-                                        Command="{Binding DelMemory}" 
                                         CommandParameter="{Binding Path=., ElementName=MemoryText}"/>
                             </Grid>
                         </DataTemplate>
